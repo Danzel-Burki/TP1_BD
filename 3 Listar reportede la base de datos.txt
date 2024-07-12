@@ -1,0 +1,13 @@
+SELECT Nombre
+FROM Materias
+WHERE Id_carrera4 = 1;
+
+SELECT *
+FROM Inscripciones
+WHERE Estado = 'Activa';
+
+SELECT Estudiantes.Nombre, AVG(Notas.Valor) AS Promedio
+FROM Estudiantes
+JOIN Inscripciones ON Estudiantes.Id_estudiante = Inscripciones.Id_estudiante1
+JOIN Notas ON Inscripciones.Id_inscripcion = Notas.Id_inscripcion1
+GROUP BY Estudiantes.Nombre;

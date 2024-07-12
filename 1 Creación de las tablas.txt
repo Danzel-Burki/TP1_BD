@@ -1,0 +1,59 @@
+CREATE TABLE Correlatividades (
+Id_correlatividad SERIAL PRIMARY KEY,
+Id_materia1 INTEGER,
+Id_materia2 INTEGER
+);
+
+CREATE TABLE Materias (
+Id_materia SERIAL PRIMARY KEY,
+Nombre VARCHAR(50),
+Anio_cursado INTEGER,
+Plan_estudio_materia VARCHAR(50),
+Id_carrera4 INTEGER
+);
+
+CREATE TABLE Carreras (
+Id_Carrera SERIAL PRIMARY KEY,
+Nombre VARCHAR(50),
+Descripcion TEXT,
+Plan_estudio_carrera VARCHAR(50),
+Resolucion_ministerial VARCHAR(50)
+);
+
+CREATE TABLE Estudiantes (
+Id_estudiante SERIAL PRIMARY KEY,
+Nombre VARCHAR(50),
+Apellido VARCHAR(50),
+Fecha_nacimiento DATE,
+direccion VARCHAR(150),
+correo VARCHAR(100),
+telefono VARCHAR(25),
+Id_carrera1 INTEGER
+);
+
+CREATE TABLE Inscripciones (
+Id_inscripcion SERIAL PRIMARY KEY,
+Estado VARCHAR(50),
+Fecha_inscripcion DATE,
+Id_estudiante1 INTEGER,
+Id_materia3 INTEGER
+);
+
+CREATE TABLE Mesas (
+Id_mesa SERIAL PRIMARY KEY,
+Fecha_hora TIMESTAMP,
+inicio_inscripcion TIMESTAMP,
+fin_inscripcion TIMESTAMP
+);
+
+CREATE TABLE Notas (
+Id_nota SERIAL PRIMARY KEY,
+Valor FLOAT,
+Id_inscripcion1 INTEGER,
+Id_tipo_nota1 INTEGER
+);
+
+CREATE TABLE Tipos_notas (
+Id_tipo_nota SERIAL PRIMARY KEY,
+Descripcion TEXT
+);

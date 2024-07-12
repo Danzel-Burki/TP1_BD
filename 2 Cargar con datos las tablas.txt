@@ -1,0 +1,28 @@
+INSERT INTO Correlatividades (Id_materia1, Id_materia2) VALUES (1, 2), (3, 4), (5, 6);
+
+INSERT INTO Materias
+(Nombre, Anio_cursado, Plan_estudio_materia, Id_carrera4) VALUES ('Programación', 2000, 'Plan 1', 1),
+('Base de datos', 2001, 'Plan2', 2),
+('Probabilidad y estadística', 2024, 'Plan3', 1);
+
+INSERT INTO Carreras
+(Nombre, Descripcion, Plan_estudio_carrera, Resolucion_ministerial)VALUES
+('TEC. SUP. EN ANALISIS DE SISTEMAS', 'Descripción', 'Plan 2020', 'Res. 500/2020'),
+('TEC. SUP. EN ADM. Y GESTION DE LAS EMPRESAS', 'Descripción', 'Plan 2020', 'Res. 501/2020'),
+('TEC. SUP. EN BIOSEGURIDAD, HIG. Y SEG.', 'Descripción', 'Plan 2020', 'Res. 502/2020');
+
+INSERT INTO Estudiantes
+(Nombre, Apellido, Fecha_nacimiento, direccion, correo, telefono, Id_carrera1) VALUES 
+('Juancho', 'Ceraty', '2000-03-01', 'Tacuari N°300', 'juanchito@gmail.com', '3737 52 2898', 1),
+('Paola', 'Sosa', '2000-03-02', 'Villaraz N°301', 'Paolita@gmail.com', '3751 54 5784', 2),
+('Daniel', 'Aponte', '2000-03-03', 'Lopezplanes N°302', 'Daniel@gmail.com', '3754 52 2862', 3);
+
+INTO Inscripciones (Estado, Fecha_inscripcion, Id_estudiante1, Id_materia3) VALUES 
+('Activa', '2020-01-10', 1, 1), ('Finalizada', '2023-12-20', 2, 2);
+
+INSERT INTO Mesas (Fecha_hora, inicio_inscripcion, fin_inscripcion)VALUES 
+('2024-06-01 10:00:00', '2024-05-20 09:00:00', '2024-05-20 18:00:00'),   ('2024-06-02 14:00:00', '2024-05-22 09:00:00', '2024-05-22 18:00:00');
+
+INSERT INTO Notas (Valor, Id_inscripcion1, Id_tipo_nota1)VALUES (8.5, 1, 1),  (7.2, 2, 2);
+
+INSERT INTO Tipos_notas (Descripcion)VALUES ('Examen'),       ('Trabajo práctico'),  ('Expocicion');
